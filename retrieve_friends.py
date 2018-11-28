@@ -5,7 +5,7 @@ CONSUMER_TOKEN = ''
 CONSUMER_SECRET = ''
 ACCESS_TOKEN = ''
 ACCESS_TOKEN_SECRET = ''
-FRIENDS_IDS = 'friends_ids.json'
+FRIENDS_IDS = 'data/friends_ids.json'
 
 with open(FRIENDS_IDS) as f:
     friends = json.load(f)
