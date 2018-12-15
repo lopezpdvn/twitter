@@ -1,0 +1,11 @@
+twitter tools
+=============
+
+by `Pedro Ivan Lopez <http://pedroivanlopez.com>`_.
+
+Retrieve 10 random following accounts and print in format
+``https://twitter.com/<username>/followers_you_follow`` to stdout.
+
+::
+
+  python3 retrieve_friends.py
