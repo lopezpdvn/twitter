@@ -8,4 +8,4 @@ Retrieve 10 random following accounts and print in format
 
 ::
 
-  python3 retrieve_friends.py
+  python3 select_random.py
