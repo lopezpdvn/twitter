@@ -1,1 +1,9 @@
-/data/
+*~
+*.swp
+*.swo
+.~*#
+/tmp
+/var
+*pyc
+/bin
+/data
