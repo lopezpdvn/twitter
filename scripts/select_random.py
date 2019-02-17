@@ -1,3 +1,4 @@
+import sys
 import random
 import json
 
@@ -9,6 +10,9 @@ N = 10
 with open(FRIENDS_IDS) as f:
     friends = [v for v in json.load(f).values()]
 
+out = []
 for i in range(N):
     friend = random.choice(friends)
-    print(PREFIX + friend['screen_name'] + SUFFIX)
+    out.append(PREFIX + friend['screen_name'] + SUFFIX)
+
+print(json.dumps(out, indent=4), file=sys.stdout)
