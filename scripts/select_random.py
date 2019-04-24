@@ -4,7 +4,7 @@ import json
 
 FRIENDS_IDS = 'data/friends_ids.json'
 PREFIX = 'https://twitter.com/'
-SUFFIX = '/followers_you_follow'
+SUFFIX = ''
 N = 10
 
 with open(FRIENDS_IDS) as f:
