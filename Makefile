@@ -12,4 +12,5 @@ init:
 
 retrieve-friends:
 	@$(PYTHON_INTERPRETER) scripts/retrieve_friends.py \
+		--auth-filepath _data/auth.json \
 		_data/friends_ids.json

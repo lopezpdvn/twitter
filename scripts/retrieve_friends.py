@@ -2,22 +2,22 @@ import json
 from argparse import ArgumentParser
 import tweepy
 
-CONSUMER_TOKEN = ''
-CONSUMER_SECRET = ''
-ACCESS_TOKEN = ''
-ACCESS_TOKEN_SECRET = ''
-
 parser = ArgumentParser()
 parser.add_argument('friends_repo')
+parser.add_argument('-a', '--auth-filepath', help='Path to auth file',
+    required=True)
 args = parser.parse_args()
 FRIENDS_IDS = args.friends_repo
 
+with open(args.auth_filepath) as f:
+    AUTH = json.load(f)
+
+auth = tweepy.OAuthHandler(AUTH['consumer_token'], AUTH['consumer_secret'])
+auth.set_access_token(AUTH['access_token'], AUTH['access_token_secret'])
+api = tweepy.API(auth)
+
 with open(FRIENDS_IDS) as f:
     friends = json.load(f)
-
-auth = tweepy.OAuthHandler(CONSUMER_TOKEN, CONSUMER_SECRET)
-auth.set_access_token(ACCESS_TOKEN, ACCESS_TOKEN_SECRET)
-api = tweepy.API(auth)
 
 iretrieve = 0
 retrieved_user = False
