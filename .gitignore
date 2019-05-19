@@ -6,5 +6,4 @@
 /var
 *pyc
 /bin
-/data
-auth.json
+/_data

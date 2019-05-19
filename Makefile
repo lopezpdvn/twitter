@@ -1,5 +1,5 @@
 PYTHON_INTERPRETER=python3
-AUTH_FP=auth.json
+AUTH_FP=_data/auth.json
 
 help:
 	@echo "Use \`make <target>\` where \`<target>\` is one of"
