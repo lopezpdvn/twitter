@@ -7,4 +7,4 @@ help:
 
 init:
 	@$(PYTHON_INTERPRETER) scripts/init_friends_ids.py "$(AUTH_FP)" \
-		> data/friends_ids.json
+		> _data/friends_ids.json
